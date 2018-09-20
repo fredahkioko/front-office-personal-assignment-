@@ -12,21 +12,30 @@ public class PersonaAssignment {
        
       //this is the panels for the login page
       package personal.assignment;
+package personal.assignment;
+import java.awt.FlowLayout;
 import javax.swing.JFrame;
 import javax.swing.*;
-
+s
 public class PersonaAssignment {
 
-   
+    
     public static void main(String[] args) {
         JFrame myframe=new JFrame("Login Page");
-        JPanel mypanel=new JPanel();
-        JLabel namelable=new JLabel("User Name: ");
-        JLabel passwordlabel=new Jlabel("Password:")
-        JTextField username=new JTextField();
+        //to help with the arrangement of the panels
+        JPanel mypanel=new JPanel(new FlowLayout());
+        JLabel namelabel=new JLabel("User Name: ");
+        JLabel passwordlabel=new JLabel("Password:");
+        //this is where the names and passwords will be written
+        JTextField username=new JTextField(10);
+        JTextField password=new JTextField(15);
         JButton Login=new JButton("login");
         JButton Exit=new JButton("Exit");
+        //we are adding panels into the frame
+        mypanel.add(namelabel);
         mypanel.add(username);
+        mypanel.add(passwordlabel);
+        mypanel.add(password);
         mypanel.add(Login);
         mypanel.add(Exit);
         myframe.add(mypanel);
@@ -37,6 +46,3 @@ public class PersonaAssignment {
     }
     
 }
-
-
-         
