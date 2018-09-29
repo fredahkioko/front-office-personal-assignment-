@@ -65,7 +65,45 @@ public class PersonaAssignment {
     } else {
         System.out.println("Invalid Username & Password!");
     }
+    //this is where the receptionist registers people
+     import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import java.sql.SQLException;
+public class userforms {
+    private connection conn;
+    private Statement statement;
+    //this is the connection of java netbeans with xampp (mysql)
+    public connection openConnection()throws SQLException
+            
+    { if (conn==null)
+    { 
+        String url="jdbc;mysql;//localhost/";
+        String dbName="registration form";
+        String driver="com.mysql.jdbc.Driver";
+        String username="root";
+        String password="";
+        try
+        {
+            class.forName(driver);
+            this.conn=(Connection)DriveMnager.getConnection(jdbc:mysql://localhost:3306/registration form?zeroDateTimeBehavior=convertToNull [root on Default schema]);
+            
+            system.out.println("REGISTER HERE");
+        } 
+        
+        catch(ClassNotFoundException | SQLException sqle)
+        {
+      system.out.println("YOU CANNOT REGISTER HERE");
+    }
+    return conn;
+    
+        }
+    }
 
+    private void forName(String driver) {
+        throw new UnsupportedOperationException("Not supported yet.");
+        Database db =new Database();
+          db.openConnection();//To change body of generated methods, choose Tools | Templates.
+    }
 
         // TODO code application logic here
     
