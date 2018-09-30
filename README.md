@@ -104,6 +104,46 @@ public class userforms {
         Database db =new Database();
           db.openConnection();//To change body of generated methods, choose Tools | Templates.
     }
+    //code for the chart showing the chart statistics of gender
+    import javax.swing.Frame;
+    import org.Jfree.chart.ChartPanel;
+    import org.Jfree.chart.JFreeChart;
+    import org.Jfree.data.general.PieDataset;
+    public class genderchart extends JFrame
+    {
+    public GenderChart(String apptitle,String chartTitle)
+    {
+    PieDataset dataset=createDataset();
+    JFreeChart chart= createChart(dataset,chartTitle)
+    ChartPanel chartPanel=new ChartPanel(chart);
+    chartPanel.setPreferredsize(new java.awt.Dimension(500,300));
+    setContentPane(chartPanel);
+    }
+    private PieDataset createdataset()
+    DafaultPieDataset result= new DefaultPieDataset();
+    result.SetValue("Male",65);
+    result.SetValue("Female",65);
+    return result;
+    }
+    Private JFreechart createchart(PieDataset dataset,string title)
+    {
+      JFreechart Chart=ChartFactory.createPiechart3D(title,dataset,true,true,false)
+      p
+      PiePlot3D plot=(PiePlot3D)chart.getPlot();
+      plot.setStartAngel(0);
+      plot.setDirection(Rotation.CLOCKWISE);
+      plot.setForegroundAlpha(0.5f);
+      return chart;
+      public class MainChart
+      {
+      public static voidmain(string[]args)
+      {
+        creatChart cc=new CreateChart("Pie Chart Test","Gender comparison");
+        cc.pack();
+        cc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        cc.setVisible(true);
+       } 
+   
 
         // TODO code application logic here
     
