@@ -15,6 +15,7 @@ public class PersonaAssignment {
 package personal.assignment;
 import java.awt.FlowLayout;
 import javax.swing.JFrame;
+import java.awt.event.*
 import javax.swing.*;
 s
 public class PersonaAssignment {
@@ -30,6 +31,7 @@ public class PersonaAssignment {
         JTextField username=new JTextField(10);
         JTextField password=new JTextField(15);
         JButton Login=new JButton("login");
+        
         JButton Exit=new JButton("Exit");
         //we are adding panels into the frame
         mypanel.add(namelabel);
@@ -42,6 +44,8 @@ public class PersonaAssignment {
         myframe.setSize(500,400);
         myframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         myframe.setVisible(true);
+       class ButtonFrame2 extends JFrame implements
+
         //to interact with user
         String Username;
     String Password;
@@ -65,13 +69,14 @@ public class PersonaAssignment {
     } else {
         System.out.println("Invalid Username & Password!");
     }
-    //this is where the receptionist registers people
+ 
+ //this is where the receptionist registers people
      import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 import java.sql.SQLException;
 public class userforms {
     private connection conn;
-    private Statement statement;
+  private Statement statement;
     //this is the connection of java netbeans with xampp (mysql)
     public connection openConnection()throws SQLException
             
@@ -142,7 +147,34 @@ public class userforms {
         cc.pack();
         cc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         cc.setVisible(true);
-       } 
+       }
+       //this is a frame for the logout page
+public class PersonalAssignment {
+     public static void main(String[] args) {
+        JFrame myframe=new JFrame("Logout Page");
+        myframe.setSize(400,300);
+        myframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myframe.setVisible(true);
+        }
+      //this is the panels for the logout page
+      package personal.assignment;
+package personal.assignment;
+import java.awt.FlowLayout;
+import javax.swing.JFrame;
+import java.awt.event.*
+import javax.swing.*;
+
+public class PersonalAssignment {
+
+    
+    public static void main(String[] args) {
+        JFrame myframe=new JFrame("Logout Page");
+        //to help with the arrangement of the panels
+        JPanel mypanel=new JPanel(new FlowLayout());
+        JLabel namelabel=new JLabel("logout: ");
+        mypanel.add(namelabel);
+         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );    
+  }
    
 
         // TODO code application logic here
